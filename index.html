@@ -1,0 +1,3165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Molexa Water - Premium Purity</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        /* ============================================================
+                   GLOBAL
+                   ============================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f5d061;
+            --gold-dark: #b8962e;
+            --black: #0a0a0a;
+            --black-light: #141414;
+            --black-card: #1a1a1a;
+            --text-light: #e0d5c1;
+            --text-muted: #b8a99a;
+            --text-dark: #888;
+            --border-gold: rgba(212, 175, 55, 0.12);
+            --shadow-gold: rgba(212, 175, 55, 0.25);
+            --font-primary: 'Poppins', sans-serif;
+            --font-display: 'Playfair Display', serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--black);
+            color: var(--text-light);
+            font-family: var(--font-primary);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--black);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 10px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(145deg, var(--gold), var(--gold-light));
+            color: var(--black);
+            padding: 14px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-family: var(--font-primary);
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 8px 25px var(--shadow-gold);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 40px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-outline {
+            display: inline-block;
+            background: transparent;
+            color: var(--gold);
+            padding: 12px 34px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-family: var(--font-primary);
+            border: 2px solid var(--gold);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn-outline:hover {
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        .btn-small {
+            padding: 8px 22px;
+            font-size: 0.85rem;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999;
+            background: #25D366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        .badge-free {
+            display: inline-block;
+            background: #4caf50;
+            color: #fff;
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        /* ============================================================
+                   TOP BAR
+                   ============================================================ */
+        .top-bar {
+            background: var(--black-card);
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-gold);
+            font-size: 0.85rem;
+        }
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .top-bar .contact-info span {
+            margin-right: 20px;
+            color: var(--text-muted);
+        }
+        .top-bar .contact-info i {
+            color: var(--gold);
+            margin-right: 6px;
+        }
+        .top-bar .whatsapp-link {
+            color: #25D366;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .top-bar .whatsapp-link:hover {
+            color: #4cdf8b;
+        }
+        .top-bar .whatsapp-link i {
+            font-size: 1.2rem;
+            margin-right: 6px;
+        }
+        .top-bar .delivery-badge {
+            color: #4caf50;
+            font-weight: 600;
+        }
+        .top-bar .delivery-badge i {
+            color: #4caf50;
+        }
+
+        /* ============================================================
+                   HEADER
+                   ============================================================ */
+        header {
+            padding: 14px 0;
+            background: var(--black);
+            border-bottom: 1px solid var(--border-gold);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-area .logo-icon i {
+            color: var(--gold);
+            font-size: 2.4rem;
+        }
+        .logo-area .logo-icon i.fa-circle-nodes {
+            font-size: 1.6rem;
+            margin-left: -10px;
+            opacity: 0.7;
+        }
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--gold);
+            letter-spacing: 3px;
+        }
+        .logo-text span {
+            font-weight: 300;
+            color: var(--gold-light);
+        }
+        .logo-tagline {
+            font-size: 0.65rem;
+            color: var(--text-dark);
+            letter-spacing: 3px;
+            display: block;
+            margin-top: -2px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: var(--text-light);
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 8px 16px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-family: var(--font-primary);
+        }
+        nav a:hover,
+        nav a.active {
+            color: var(--gold);
+            background: rgba(212, 175, 55, 0.08);
+        }
+        nav a.admin-link {
+            border: 1px solid var(--border-gold);
+            color: var(--gold);
+        }
+        nav a.admin-link:hover {
+            background: rgba(212, 175, 55, 0.12);
+        }
+        nav a.admin-link.logged-in {
+            background: rgba(212, 175, 55, 0.15);
+            border-color: var(--gold);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--gold);
+            cursor: pointer;
+        }
+
+        /* ============================================================
+                   PAGES
+                   ============================================================ */
+        .page-section {
+            display: none;
+            animation: fadeIn 0.6s ease;
+        }
+        .page-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ============================================================
+                   HERO - IMAGE BIGGER
+                   ============================================================ */
+        .hero {
+            padding: 50px 0 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.03) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .hero-flex {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-left {
+            flex: 1 1 45%;
+        }
+        .hero-left .badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold);
+            font-weight: 600;
+            padding: 6px 22px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-gold);
+        }
+        .hero-left h1 {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.05;
+            color: #ffffff;
+        }
+        .hero-left h1 span {
+            background: linear-gradient(145deg, var(--gold), var(--gold-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-left .tagline {
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: var(--text-muted);
+            margin: 16px 0 28px;
+        }
+        .hero-left .tagline strong {
+            font-weight: 700;
+            color: var(--gold);
+        }
+        .hero-btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+        .hero-right {
+            flex: 1 1 45%;
+            text-align: center;
+            background: var(--black-light);
+            border-radius: 40px;
+            padding: 30px 20px;
+            border: 1px solid var(--border-gold);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        .hero-right img {
+            max-width: 100%;
+            width: 100%;
+            max-height: 420px;
+            height: auto;
+            object-fit: contain;
+        }
+        .hero-label {
+            margin-top: 8px;
+            font-size: 0.75rem;
+            color: var(--text-dark);
+            letter-spacing: 3px;
+        }
+
+        /* ============================================================
+                   LOGO MEANING
+                   ============================================================ */
+        .meaning-section {
+            padding: 70px 0;
+            background: var(--black-card);
+            border-radius: 60px 60px 0 0;
+            margin-top: 20px;
+            border-top: 1px solid var(--border-gold);
+        }
+        .meaning-section h2 {
+            text-align: center;
+            font-family: var(--font-display);
+            font-size: 2.4rem;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+        .meaning-section h2 span {
+            color: var(--gold);
+        }
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-size: 1.05rem;
+        }
+        .meaning-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 35px;
+            justify-content: center;
+        }
+        .meaning-card {
+            flex: 1 1 260px;
+            background: var(--black);
+            padding: 32px 24px;
+            border-radius: 28px;
+            text-align: center;
+            border: 1px solid var(--border-gold);
+            transition: all 0.4s ease;
+        }
+        .meaning-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold);
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.5);
+        }
+        .meaning-card .emoji-big {
+            font-size: 3.2rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .meaning-card i {
+            font-size: 2.8rem;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 6px;
+        }
+        .meaning-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        .meaning-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        .meaning-card.golden-bg {
+            background: rgba(212, 175, 55, 0.04);
+            border-color: rgba(212, 175, 55, 0.2);
+        }
+        .meaning-card.golden-bg h3 {
+            color: var(--gold);
+        }
+        .meaning-card .ph-label {
+            margin-top: 10px;
+            font-weight: 700;
+            color: var(--gold);
+            font-size: 1rem;
+        }
+
+        /* ============================================================
+                   PURITY
+                   ============================================================ */
+        .purity-section {
+            padding: 70px 0;
+            background: var(--black);
+        }
+        .purity-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+        .purity-text {
+            flex: 1 1 45%;
+        }
+        .purity-text h2 {
+            font-family: var(--font-display);
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        .purity-text h2 span {
+            color: var(--gold);
+        }
+        .purity-text>p {
+            color: var(--text-muted);
+            margin: 16px 0;
+            font-size: 1.05rem;
+        }
+        .purity-text ul {
+            list-style: none;
+            margin: 24px 0 30px;
+        }
+        .purity-text ul li {
+            padding: 10px 0;
+            font-size: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            color: var(--text-light);
+        }
+        .purity-text ul li i {
+            color: var(--gold);
+            width: 24px;
+            font-size: 1.2rem;
+        }
+        .purity-image {
+            flex: 1 1 45%;
+            background: var(--black-light);
+            border-radius: 40px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid var(--border-gold);
+        }
+        .purity-image img {
+            max-width: 100%;
+            max-height: 220px;
+            object-fit: contain;
+        }
+
+        /* ============================================================
+                   STATS
+                   ============================================================ */
+        .stats-section {
+            padding: 50px 0;
+            background: var(--black-card);
+            border-top: 1px solid var(--border-gold);
+            border-bottom: 1px solid var(--border-gold);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        .stat-item h3 {
+            font-family: var(--font-display);
+            font-size: 2.8rem;
+            color: var(--gold);
+            font-weight: 700;
+        }
+        .stat-item p {
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            font-weight: 300;
+        }
+
+        /* ============================================================
+                   PRIVATE LABEL
+                   ============================================================ */
+        .private-label {
+            background: linear-gradient(145deg, var(--gold), var(--gold-dark));
+            color: var(--black);
+            padding: 55px 0;
+            border-radius: 60px;
+            margin: 20px 0 50px;
+        }
+        .private-label .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        .private-label h2 {
+            font-family: var(--font-display);
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--black);
+        }
+        .private-label h2 small {
+            display: block;
+            font-weight: 300;
+            font-size: 1.05rem;
+            color: #2a1f0a;
+            margin-top: 4px;
+            font-family: var(--font-primary);
+        }
+        .private-label .order-details {
+            background: rgba(0, 0, 0, 0.06);
+            padding: 18px 28px;
+            border-radius: 30px;
+            border-left: 4px solid var(--black);
+        }
+        .private-label .order-details p {
+            font-size: 1.15rem;
+            margin: 4px 0;
+            color: var(--black);
+            font-weight: 500;
+        }
+        .private-label .order-details i {
+            color: var(--black);
+            margin-right: 12px;
+            width: 28px;
+        }
+        .private-label .btn-primary {
+            background: var(--black);
+            color: var(--gold);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        .private-label .btn-primary:hover {
+            background: var(--black-card);
+            color: var(--gold-light);
+        }
+
+        /* ============================================================
+                   LOCATION
+                   ============================================================ */
+        .location-section {
+            padding: 30px 0 60px;
+            text-align: center;
+        }
+        .loc-box {
+            background: var(--black-light);
+            padding: 24px 34px;
+            border-radius: 40px;
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            border: 1px solid var(--border-gold);
+            transition: 0.3s;
+        }
+        .loc-box:hover {
+            border-color: var(--gold);
+        }
+        .loc-box i {
+            color: var(--gold);
+            font-size: 1.6rem;
+        }
+        .loc-box span {
+            font-weight: 500;
+            font-size: 1.05rem;
+            color: var(--text-light);
+        }
+        .loc-box span strong {
+            color: #ffffff;
+        }
+
+        /* ============================================================
+                   ABOUT - IMAGE BIGGER
+                   ============================================================ */
+        .page-header {
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+        .page-header h1 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: #ffffff;
+        }
+        .page-header h1 span {
+            color: var(--gold);
+        }
+        .page-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .about-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            padding: 30px 0;
+        }
+        .about-text {
+            flex: 1 1 50%;
+        }
+        .about-text h2 {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            color: #ffffff;
+        }
+        .about-text h2 span {
+            color: var(--gold);
+        }
+        .about-text p {
+            color: var(--text-muted);
+            margin: 12px 0;
+        }
+        .about-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .about-features div {
+            background: rgba(212, 175, 55, 0.05);
+            padding: 8px 18px;
+            border-radius: 30px;
+            border: 1px solid var(--border-gold);
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        .about-features div i {
+            color: var(--gold);
+            margin-right: 8px;
+        }
+        .about-image {
+            flex: 1 1 40%;
+            background: var(--black-light);
+            border-radius: 40px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid var(--border-gold);
+        }
+        .about-image img {
+            max-width: 100%;
+            width: 100%;
+            max-height: 370px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .team-section {
+            padding: 50px 0;
+            background: var(--black-card);
+            border-radius: 60px;
+            margin: 20px 0;
+        }
+        .team-section h2 {
+            text-align: center;
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            color: #ffffff;
+        }
+        .team-section h2 span {
+            color: var(--gold);
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .team-card {
+            background: var(--black);
+            padding: 30px 20px;
+            border-radius: 24px;
+            text-align: center;
+            border: 1px solid var(--border-gold);
+            transition: all 0.3s ease;
+        }
+        .team-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+        .team-card i {
+            font-size: 2.8rem;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+        .team-card h3 {
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-family: var(--font-display);
+        }
+        .team-card p {
+            color: var(--text-dark);
+            font-size: 0.9rem;
+        }
+
+        /* ============================================================
+                   PRODUCTS
+                   ============================================================ */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 30px 0;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .product-card {
+            background: var(--black-light);
+            padding: 30px 20px;
+            border-radius: 28px;
+            text-align: center;
+            border: 1px solid var(--border-gold);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .product-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+        .product-card.golden-border {
+            border-color: var(--gold);
+            background: rgba(212, 175, 55, 0.03);
+        }
+        .product-card .product-icon img {
+            width: 80px;
+            height: auto;
+        }
+        .product-card h3 {
+            font-family: var(--font-display);
+            color: #ffffff;
+            font-size: 1.6rem;
+        }
+        .product-card .product-desc {
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            margin: 4px 0;
+        }
+        .product-card .product-price {
+            color: var(--gold);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 12px 0 16px;
+            font-family: var(--font-display);
+        }
+        .product-card .qty-selector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin: 12px 0;
+        }
+        .product-card .qty-selector button {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid var(--gold);
+            background: transparent;
+            color: var(--gold);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 700;
+        }
+        .product-card .qty-selector button:hover {
+            background: var(--gold);
+            color: var(--black);
+        }
+        .product-card .qty-selector span {
+            font-size: 1.2rem;
+            color: #fff;
+            min-width: 30px;
+            text-align: center;
+        }
+        .product-card .free-delivery-badge {
+            display: inline-block;
+            background: #4caf50;
+            color: #fff;
+            padding: 2px 14px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .bulk-section {
+            text-align: center;
+            padding: 50px 0;
+            background: var(--black-card);
+            border-radius: 60px;
+            margin: 20px 0;
+        }
+        .bulk-section h2 {
+            font-family: var(--font-display);
+            color: #ffffff;
+            font-size: 2.2rem;
+        }
+        .bulk-section h2 span {
+            color: var(--gold);
+        }
+        .bulk-section p {
+            color: var(--text-muted);
+            margin: 12px 0 24px;
+        }
+
+        /* ============================================================
+                   CHECKOUT
+                   ============================================================ */
+        .checkout-section {
+            padding: 30px 0 50px;
+        }
+        .checkout-section h2 {
+            font-family: var(--font-display);
+            color: #ffffff;
+            font-size: 2rem;
+            text-align: center;
+        }
+        .checkout-section h2 span {
+            color: var(--gold);
+        }
+
+        .checkout-box {
+            background: var(--black-light);
+            padding: 40px;
+            border-radius: 30px;
+            border: 1px solid var(--border-gold);
+            max-width: 700px;
+            margin: 20px auto;
+        }
+        .checkout-box .order-summary {
+            background: var(--black);
+            padding: 16px 20px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            border: 1px solid var(--border-gold);
+        }
+        .checkout-box .order-summary p {
+            margin: 4px 0;
+            color: var(--text-muted);
+        }
+        .checkout-box .order-summary strong {
+            color: #ffffff;
+        }
+        .checkout-box .order-summary .total-amount {
+            font-size: 1.4rem;
+            color: var(--gold);
+            font-weight: 700;
+            font-family: var(--font-display);
+        }
+        .checkout-box .free-delivery-banner {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid #4caf50;
+            padding: 10px 16px;
+            border-radius: 12px;
+            text-align: center;
+            color: #4caf50;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .checkout-box label {
+            display: block;
+            color: var(--text-light);
+            font-weight: 500;
+            margin: 12px 0 4px;
+            font-size: 0.9rem;
+        }
+        .checkout-box label .required {
+            color: #ff6b6b;
+        }
+        .checkout-box input,
+        .checkout-box select,
+        .checkout-box textarea {
+            width: 100%;
+            padding: 12px 16px;
+            background: var(--black);
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1rem;
+            font-family: var(--font-primary);
+            transition: 0.3s;
+        }
+        .checkout-box input:focus,
+        .checkout-box select:focus,
+        .checkout-box textarea:focus {
+            border-color: var(--gold);
+            outline: none;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.04);
+        }
+        .checkout-box input::placeholder,
+        .checkout-box textarea::placeholder {
+            color: var(--text-dark);
+        }
+        .checkout-box textarea {
+            resize: vertical;
+            min-height: 60px;
+        }
+
+        .payment-options {
+            margin: 16px 0;
+        }
+        .payment-options .payment-option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: var(--black);
+            border-radius: 12px;
+            border: 1px solid var(--border-gold);
+            margin: 6px 0;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .payment-options .payment-option:hover {
+            border-color: var(--gold);
+        }
+        .payment-options .payment-option input[type="radio"] {
+            width: auto;
+            accent-color: var(--gold);
+            cursor: pointer;
+        }
+        .payment-options .payment-option label {
+            margin: 0;
+            cursor: pointer;
+            font-weight: 400;
+            color: var(--text-muted);
+        }
+        .payment-options .payment-option label strong {
+            color: #ffffff;
+        }
+
+        .bank-details {
+            background: var(--black);
+            padding: 16px 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border-gold);
+            margin: 12px 0;
+            display: none;
+        }
+        .bank-details.show {
+            display: block;
+        }
+        .bank-details p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin: 4px 0;
+        }
+        .bank-details strong {
+            color: #ffffff;
+        }
+
+        /* ============================================================
+                   CONTACT
+                   ============================================================ */
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 30px 0;
+        }
+        .contact-form {
+            flex: 1 1 50%;
+            background: var(--black-light);
+            padding: 40px;
+            border-radius: 30px;
+            border: 1px solid var(--border-gold);
+        }
+        .contact-form h2 {
+            font-family: var(--font-display);
+            color: #ffffff;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        .contact-form h2 span {
+            color: var(--gold);
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px 18px;
+            margin: 8px 0;
+            background: var(--black);
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1rem;
+            transition: 0.3s;
+            font-family: var(--font-primary);
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--gold);
+            outline: none;
+        }
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: var(--text-dark);
+        }
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .contact-info {
+            flex: 1 1 35%;
+            background: var(--black-light);
+            padding: 40px;
+            border-radius: 30px;
+            border: 1px solid var(--border-gold);
+        }
+        .contact-info h3 {
+            font-family: var(--font-display);
+            color: #ffffff;
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+        }
+        .contact-info h3 span {
+            color: var(--gold);
+        }
+        .info-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 22px;
+            align-items: flex-start;
+        }
+        .info-item i {
+            font-size: 1.4rem;
+            color: var(--gold);
+            width: 32px;
+            margin-top: 4px;
+        }
+        .info-item div {
+            color: var(--text-muted);
+        }
+        .info-item div strong {
+            color: #ffffff;
+        }
+
+        /* ============================================================
+                   INBOX
+                   ============================================================ */
+        .inbox-section {
+            padding: 30px 0 50px;
+        }
+
+        .message-card {
+            background: var(--black-light);
+            padding: 20px 24px;
+            border-radius: 16px;
+            border: 1px solid var(--border-gold);
+            margin-bottom: 16px;
+            transition: 0.3s;
+        }
+        .message-card:hover {
+            border-color: var(--gold);
+        }
+        .message-card .msg-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+        .message-card .msg-header h4 {
+            color: var(--gold);
+            font-size: 1rem;
+        }
+        .message-card .msg-header small {
+            color: var(--text-dark);
+            font-size: 0.8rem;
+        }
+        .message-card .msg-body {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        .message-card .msg-reply {
+            margin-top: 12px;
+            padding: 12px 16px;
+            background: rgba(212, 175, 55, 0.04);
+            border-radius: 12px;
+            border-left: 3px solid var(--gold);
+        }
+        .message-card .msg-reply strong {
+            color: var(--gold);
+        }
+        .message-card .msg-reply p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 4px;
+        }
+
+        .reply-form {
+            display: flex;
+            gap: 12px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+        .reply-form input {
+            flex: 1;
+            padding: 10px 16px;
+            background: var(--black);
+            border: 1px solid var(--border-gold);
+            border-radius: 30px;
+            color: #fff;
+            font-size: 0.9rem;
+            font-family: var(--font-primary);
+            min-width: 200px;
+        }
+        .reply-form input:focus {
+            border-color: var(--gold);
+            outline: none;
+        }
+        .reply-form button {
+            padding: 10px 24px;
+            border-radius: 30px;
+            border: none;
+            background: var(--gold);
+            color: var(--black);
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            font-family: var(--font-primary);
+        }
+        .reply-form button:hover {
+            background: var(--gold-light);
+        }
+
+        .no-messages {
+            text-align: center;
+            color: var(--text-dark);
+            padding: 40px 0;
+        }
+        .no-messages i {
+            font-size: 3rem;
+            color: var(--gold);
+            opacity: 0.3;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        /* ============================================================
+                   PRIVATE LABEL PAGE
+                   ============================================================ */
+        .pl-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            padding: 30px 0;
+        }
+        .pl-text {
+            flex: 1 1 50%;
+        }
+        .pl-text h2 {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            color: #ffffff;
+        }
+        .pl-text h2 span {
+            color: var(--gold);
+        }
+        .pl-text p {
+            color: var(--text-muted);
+            margin: 12px 0;
+        }
+        .pl-text ul {
+            list-style: none;
+            margin: 16px 0 24px;
+        }
+        .pl-text ul li {
+            padding: 8px 0;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .pl-text ul li i {
+            color: var(--gold);
+        }
+        .pl-image {
+            flex: 1 1 40%;
+            background: var(--black-light);
+            border-radius: 40px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid var(--border-gold);
+        }
+        .pl-image img {
+            max-width: 100%;
+            max-height: 250px;
+        }
+
+        /* ============================================================
+                   MAP
+                   ============================================================ */
+        .map-section {
+            padding: 40px 0 60px;
+            text-align: center;
+        }
+        .map-section h2 {
+            font-family: var(--font-display);
+            color: #ffffff;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .map-section h2 span {
+            color: var(--gold);
+        }
+        .map-placeholder {
+            background: var(--black-light);
+            padding: 50px 20px;
+            border-radius: 30px;
+            border: 1px solid var(--border-gold);
+            transition: 0.3s;
+        }
+        .map-placeholder:hover {
+            border-color: var(--gold);
+        }
+        .map-placeholder i {
+            font-size: 3.2rem;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+        .map-placeholder p {
+            color: var(--text-dark);
+        }
+
+        /* ============================================================
+                   FOOTER
+                   ============================================================ */
+        footer {
+            background: var(--black-card);
+            border-top: 1px solid var(--border-gold);
+            padding: 50px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-family: var(--font-display);
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .footer-col p,
+        .footer-col a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 2;
+            display: block;
+            transition: 0.3s;
+        }
+        .footer-col a:hover {
+            color: var(--gold);
+            transform: translateX(4px);
+        }
+
+        .footer-col .whatsapp-link {
+            color: #25D366;
+            font-weight: 600;
+        }
+        .footer-col .whatsapp-link:hover {
+            color: #4cdf8b;
+        }
+        .footer-col .whatsapp-link i {
+            font-size: 1.2rem;
+            margin-right: 8px;
+        }
+
+        .footer-col .newsletter-form {
+            display: flex;
+            margin-top: 12px;
+            border-radius: 30px;
+            overflow: hidden;
+            border: 1px solid var(--border-gold);
+        }
+        .footer-col .newsletter-form input {
+            flex: 1;
+            padding: 12px 16px;
+            background: var(--black);
+            border: none;
+            color: #fff;
+            font-size: 0.9rem;
+            font-family: var(--font-primary);
+            outline: none;
+        }
+        .footer-col .newsletter-form input::placeholder {
+            color: var(--text-dark);
+        }
+        .footer-col .newsletter-form button {
+            padding: 12px 20px;
+            background: var(--gold);
+            color: var(--black);
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+            font-family: var(--font-primary);
+        }
+        .footer-col .newsletter-form button:hover {
+            background: var(--gold-light);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-gold);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            text-align: center;
+        }
+        .footer-bottom p {
+            color: var(--text-dark);
+            font-size: 0.85rem;
+        }
+        .footer-bottom .logo-foot {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 2px;
+        }
+        .footer-bottom .footer-heart i {
+            color: var(--gold);
+        }
+
+        /* ============================================================
+                   ADMIN
+                   ============================================================ */
+        .admin-panel {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        .admin-panel.active {
+            display: block;
+        }
+
+        .login-box {
+            background: var(--black-light);
+            padding: 50px 40px;
+            border-radius: 30px;
+            border: 1px solid var(--border-gold);
+            max-width: 420px;
+            margin: 60px auto;
+            text-align: center;
+        }
+        .login-box .admin-logo {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+        .login-box .admin-logo span {
+            color: var(--gold-light);
+        }
+        .login-box .sub {
+            color: var(--text-dark);
+            margin: 8px 0 24px;
+        }
+        .login-box input {
+            width: 100%;
+            padding: 14px 18px;
+            margin: 10px 0;
+            background: var(--black);
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1rem;
+            transition: 0.3s;
+            font-family: var(--font-primary);
+        }
+        .login-box input:focus {
+            border-color: var(--gold);
+            outline: none;
+        }
+        .login-box input::placeholder {
+            color: var(--text-dark);
+        }
+        .login-box .btn-login {
+            width: 100%;
+            padding: 14px;
+            margin-top: 16px;
+            background: linear-gradient(145deg, var(--gold), var(--gold-light));
+            color: var(--black);
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            font-family: var(--font-primary);
+        }
+        .login-box .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px var(--shadow-gold);
+        }
+        .login-box .back-link {
+            display: block;
+            margin-top: 16px;
+            color: var(--text-dark);
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 0.9rem;
+        }
+        .login-box .back-link:hover {
+            color: var(--gold);
+        }
+        .login-box .error {
+            color: #ff6b6b;
+            font-size: 0.9rem;
+            margin-top: 12px;
+            display: none;
+        }
+        .login-box .admin-note {
+            color: #444;
+            font-size: 0.7rem;
+            margin-top: 20px;
+        }
+
+        .admin-dash {
+            display: none;
+        }
+        .admin-dash.active {
+            display: block;
+        }
+
+        .admin-header-bar {
+            background: var(--black-card);
+            padding: 16px 30px;
+            border-bottom: 1px solid var(--border-gold);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .admin-header-bar h1 {
+            font-family: var(--font-display);
+            color: var(--gold);
+            font-size: 1.4rem;
+        }
+        .admin-header-bar h1 span {
+            color: var(--gold-light);
+        }
+        .admin-header-bar .logout-btn {
+            color: var(--text-dark);
+            padding: 8px 22px;
+            border: 1px solid var(--border-gold);
+            border-radius: 30px;
+            transition: 0.3s;
+            cursor: pointer;
+            background: none;
+            font-size: 0.9rem;
+            font-family: var(--font-primary);
+        }
+        .admin-header-bar .logout-btn:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .dash-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .dash-stat {
+            background: var(--black-light);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid var(--border-gold);
+            text-align: center;
+        }
+        .dash-stat h3 {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            color: var(--gold);
+        }
+        .dash-stat p {
+            color: var(--text-dark);
+            font-size: 0.9rem;
+        }
+
+        .dash-table-wrap {
+            background: var(--black-light);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid var(--border-gold);
+            overflow-x: auto;
+        }
+        .dash-table-wrap h2 {
+            font-family: var(--font-display);
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+        }
+        .dash-table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+        .dash-table-wrap th {
+            text-align: left;
+            padding: 10px 8px;
+            color: var(--gold);
+            border-bottom: 1px solid var(--border-gold);
+            font-weight: 600;
+        }
+        .dash-table-wrap td {
+            padding: 10px 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+            color: var(--text-light);
+        }
+        .status-badge {
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+        .status-badge.pending {
+            background: rgba(255, 193, 7, 0.12);
+            color: #ffc107;
+        }
+        .status-badge.delivered {
+            background: rgba(76, 175, 80, 0.12);
+            color: #4caf50;
+        }
+        .status-badge.processing {
+            background: rgba(33, 150, 243, 0.12);
+            color: #2196f3;
+        }
+        .status-badge.cancelled {
+            background: rgba(255, 0, 0, 0.12);
+            color: #ff4444;
+        }
+
+        .dash-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+        .dash-actions a {
+            padding: 12px 24px;
+            background: var(--black);
+            color: var(--text-light);
+            border-radius: 12px;
+            border: 1px solid var(--border-gold);
+            transition: 0.3s;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-family: var(--font-primary);
+        }
+        .dash-actions a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .admin-tabs {
+            display: flex;
+            gap: 8px;
+            margin: 20px 0 30px;
+            flex-wrap: wrap;
+        }
+        .admin-tabs button {
+            padding: 10px 24px;
+            background: var(--black);
+            border: 1px solid var(--border-gold);
+            border-radius: 30px;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: 0.3s;
+            font-family: var(--font-primary);
+            font-size: 0.9rem;
+        }
+        .admin-tabs button:hover,
+        .admin-tabs button.active {
+            background: var(--gold);
+            color: var(--black);
+            border-color: var(--gold);
+        }
+
+        .order-detail-card {
+            background: var(--black);
+            padding: 12px 16px;
+            border-radius: 12px;
+            margin-bottom: 8px;
+            border: 1px solid var(--border-gold);
+            font-size: 0.85rem;
+        }
+        .order-detail-card .od-row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 4px;
+            padding: 2px 0;
+        }
+        .order-detail-card .od-row strong {
+            color: #ffffff;
+        }
+        .order-detail-card .od-row .label {
+            color: var(--text-dark);
+        }
+
+        .status-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 6px;
+        }
+        .status-actions button {
+            padding: 4px 14px;
+            border-radius: 20px;
+            border: none;
+            font-size: 0.7rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            font-family: var(--font-primary);
+        }
+        .status-actions .btn-processing {
+            background: #2196f3;
+            color: #fff;
+        }
+        .status-actions .btn-delivered {
+            background: #4caf50;
+            color: #fff;
+        }
+        .status-actions .btn-cancelled {
+            background: #ff4444;
+            color: #fff;
+        }
+        .status-actions button:hover {
+            opacity: 0.8;
+            transform: scale(0.96);
+        }
+
+        /* ============================================================
+                   TOAST
+                   ============================================================ */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--black-card);
+            border: 1px solid var(--gold);
+            padding: 16px 28px;
+            border-radius: 16px;
+            color: var(--text-light);
+            font-family: var(--font-primary);
+            z-index: 9999;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.4s ease;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+            max-width: 400px;
+        }
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .toast i {
+            color: var(--gold);
+            margin-right: 10px;
+        }
+
+        /* ============================================================
+                   RESPONSIVE
+                   ============================================================ */
+        @media (max-width: 992px) {
+            .hero-left h1 {
+                font-size: 3rem;
+            }
+            .hero-right img {
+                max-height: 320px;
+            }
+            .about-image img {
+                max-height: 280px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar .contact-info span {
+                display: none;
+            }
+            .top-bar .contact-info span:first-child {
+                display: inline;
+            }
+            .top-bar .delivery-badge {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+            nav {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                padding-top: 16px;
+                gap: 2px;
+            }
+            nav.open {
+                display: flex;
+            }
+            nav a {
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+                font-size: 1rem;
+            }
+
+            .hero-left h1 {
+                font-size: 2.6rem;
+            }
+            .hero-left .tagline {
+                font-size: 1.1rem;
+            }
+            .hero-btns {
+                flex-direction: column;
+            }
+            .hero-btns .btn-primary,
+            .hero-btns .btn-outline {
+                width: 100%;
+                text-align: center;
+            }
+            .hero-right img {
+                max-height: 280px;
+            }
+
+            .private-label .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .private-label .order-details {
+                text-align: left;
+                width: 100%;
+            }
+
+            .meaning-card {
+                flex: 1 1 100%;
+            }
+            .purity-flex {
+                flex-direction: column;
+            }
+            .about-grid {
+                flex-direction: column;
+            }
+            .about-image img {
+                max-height: 250px;
+            }
+            .pl-grid {
+                flex-direction: column;
+            }
+            .contact-grid {
+                flex-direction: column;
+            }
+            .contact-form,
+            .contact-info {
+                flex: 1 1 100%;
+            }
+
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .login-box {
+                margin: 30px 20px;
+                padding: 30px 20px;
+            }
+
+            .admin-header-bar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .dash-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .products-grid {
+                grid-template-columns: 1fr;
+                max-width: 100%;
+            }
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 1.6rem;
+                bottom: 20px;
+                left: 20px;
+            }
+            .checkout-box {
+                padding: 20px;
+            }
+            .dash-table-wrap table {
+                font-size: 0.7rem;
+            }
+            .dash-table-wrap th,
+            .dash-table-wrap td {
+                padding: 6px 4px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-left h1 {
+                font-size: 2rem;
+            }
+            .hero-right img {
+                max-height: 200px;
+            }
+            .about-image img {
+                max-height: 200px;
+            }
+            .btn-primary,
+            .btn-outline {
+                padding: 12px 24px;
+                font-size: 0.9rem;
+            }
+            .private-label h2 {
+                font-size: 1.8rem;
+            }
+            .private-label .order-details p {
+                font-size: 1rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .dash-stats {
+                grid-template-columns: 1fr;
+            }
+            .meaning-card {
+                flex: 1 1 100%;
+            }
+            .loc-box {
+                padding: 16px 20px;
+                gap: 12px;
+            }
+            .loc-box span {
+                font-size: 0.9rem;
+            }
+            .reply-form {
+                flex-direction: column;
+            }
+            .reply-form input {
+                width: 100%;
+            }
+            .checkout-box {
+                padding: 16px;
+            }
+            .checkout-box .order-summary {
+                padding: 12px;
+            }
+            .toast {
+                max-width: 90%;
+                right: 5%;
+                bottom: 80px;
+                padding: 14px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+    WHATSAPP FLOATING
+    ============================================================ -->
+    <a href="https://wa.me/923158969879" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ============================================================
+    TOP BAR
+    ============================================================ -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span><i class="fas fa-phone-alt"></i> 0315 8969879</span>
+                <span><i class="fas fa-envelope"></i> shamikkhanzada@gmail.com</span>
+                <span><i class="fas fa-clock"></i> Mon-Sat: 9AM - 8PM</span>
+                <span class="delivery-badge"><i class="fas fa-truck"></i> Free Delivery All Pakistan</span>
+            </div>
+            <div>
+                <a href="https://wa.me/923158969879" target="_blank" class="whatsapp-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    HEADER
+    ============================================================ -->
+    <header>
+        <div class="container header-flex">
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <i class="fas fa-tint"></i>
+                    <i class="fas fa-circle-nodes"></i>
+                </div>
+                <div>
+                    <span class="logo-text">MOLEXA <span>WATER</span></span>
+                    <span class="logo-tagline">PURITY AT MOLECULAR LEVEL</span>
+                </div>
+            </div>
+
+            <nav id="mainNav">
+                <a class="active" onclick="showPage('home')">Home</a>
+                <a onclick="showPage('about')">About</a>
+                <a onclick="showPage('products')">Products</a>
+                <a onclick="showPage('private-label')">Private Label</a>
+                <a onclick="showPage('contact')">Contact</a>
+                <a onclick="showPage('inbox')"><i class="fas fa-inbox"></i> Inbox</a>
+                <a class="admin-link" id="adminNavBtn" onclick="toggleAdmin()"><i class="fas fa-user-shield"></i> <span id="adminBtnText">Admin</span></a>
+            </nav>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ============================================================
+    HOME
+    ============================================================ -->
+    <div id="page-home" class="page-section active">
+
+        <section class="hero">
+            <div class="container hero-flex">
+                <div class="hero-left">
+                    <div class="badge"><i class="fas fa-flask"></i> MOLECULAR PURIFICATION</div>
+                    <h1>PURITY AT <br /><span>MOLECULAR LEVEL</span></h1>
+                    <p class="tagline"><strong>MOLEXA</strong> — where every drop is engineered for perfection.</p>
+                    <div class="hero-btns">
+                        <a class="btn-primary" onclick="showPage('products')"><i class="fas fa-shopping-cart"></i> Shop Now</a>
+                        <a class="btn-outline" onclick="showPage('about')">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <img src="C:\Users\saad\Downloads\WhatsApp Image 2026-04-27 at 9.03.57 PM.jpeg" alt="Molexa Water" />
+                    <p class="hero-label">⬇ WATER DROP + MOLECULAR STRUCTURE</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOGO MEANING -->
+        <section class="meaning-section">
+            <div class="container">
+                <h2>LOGO <span>MEANING</span></h2>
+                <p class="section-subtitle">Every element reflects purity, science, and life.</p>
+                <div class="meaning-grid">
+                    <div class="meaning-card">
+                        <span class="emoji-big">💧</span>
+                        <i class="fas fa-tint"></i>
+                        <h3>WATER DROP</h3>
+                        <p><strong>Symbol of purity,</strong> life and hydration.</p>
+                    </div>
+                    <div class="meaning-card">
+                        <span class="emoji-big">⚛️</span>
+                        <i class="fas fa-circle-nodes"></i>
+                        <h3>MOLECULAR STRUCTURE</h3>
+                        <p><strong>Purification,</strong> &amp; molecular precision.</p>
+                    </div>
+                    <div class="meaning-card golden-bg">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>OUR PURITY GUARANTEE</h3>
+                        <p><strong>MOLECULAR PURIFICATION</strong> · PURITY AT MOLEXA LEVEL</p>
+                        <p class="ph-label">⚖️ BALANCED pH LEVEL</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PURITY -->
+        <section class="purity-section">
+            <div class="container purity-flex">
+                <div class="purity-text">
+                    <h2>Purity <span>at the Molecular Level</span></h2>
+                    <p>We don't just filter — we restructure. Every drop of Molexa goes through advanced molecular purification.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> <strong>MOLECULAR PURIFICATION</strong> — removing impurities at the molecular scale</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>PURITY AT MOLEXA LEVEL</strong> — our own standard, beyond ordinary</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>BALANCED pH LEVEL</strong> — perfectly tuned for your health</li>
+                    </ul>
+                    <a class="btn-primary" onclick="showPage('about')"><i class="fas fa-flask"></i> Explore Our Process</a>
+                </div>
+                <div class="purity-image">
+                    <img src="C:\Users\saad\Downloads\WhatsApp Image 2026-04-26 at 7.57.36 PM.jpeg" alt="Molecular purification" />
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS -->
+        <section class="stats-section">
+            <div class="container stats-grid">
+                <div class="stat-item"><h3>10+</h3><p>Years of Excellence</p></div>
+                <div class="stat-item"><h3>50K+</h3><p>Happy Customers</p></div>
+                <div class="stat-item"><h3>100%</h3><p>Pure &amp; Safe</p></div>
+                <div class="stat-item"><h3>24/7</h3><p>Customer Support</p></div>
+            </div>
+        </section>
+
+        <!-- PRIVATE LABEL -->
+        <section class="private-label">
+            <div class="container">
+                <div>
+                    <h2>PRIVATE LABEL <small>Personalized custom branding for events, corporate gifts, and special occasions.</small></h2>
+                </div>
+                <div class="order-details">
+                    <p><i class="fas fa-percent"></i> <strong>100%</strong> PURE</p>
+                    <p><i class="fas fa-tag"></i> ORDER NOW: <strong>DRINK PURE, LIVE BETTER</strong></p>
+                    <p><i class="fas fa-phone-alt"></i> CALL/WHATSAPP: <strong>0315 8969879</strong></p>
+                </div>
+                <a class="btn-primary" onclick="showPage('private-label')"><i class="fas fa-shopping-cart"></i> ORDER NOW</a>
+            </div>
+        </section>
+
+        <!-- LOCATION -->
+        <section class="location-section container">
+            <div class="loc-box">
+                <i class="fas fa-map-marker-alt"></i>
+                <span><strong>LOCATION:</strong> 36B, LANDHI NO 4, KARACHI</span>
+                <i class="fas fa-truck"></i>
+                <span>Free Delivery All Pakistan</span>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- ============================================================
+    ABOUT
+    ============================================================ -->
+    <div id="page-about" class="page-section">
+        <section class="page-header">
+            <div class="container">
+                <h1>About <span>Molexa Water</span></h1>
+                <p>Purity at Molecular Level — Since 2016</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Our <span>Story</span></h2>
+                    <p>Molexa Water was born with a single mission: to deliver the purest drinking water through advanced molecular purification technology.</p>
+                    <p>Based in Karachi, we combine cutting-edge reverse osmosis with molecular-level filtration to ensure every drop meets our stringent quality standards.</p>
+                    <h3 style="margin-top: 24px; color: var(--gold);">Our <span style="color:#fff;">Mission</span></h3>
+                    <p>To provide <strong>100% pure, pH-balanced water</strong> that promotes health and well-being for every Pakistani household.</p>
+                    <div class="about-features">
+                        <div><i class="fas fa-check-circle"></i> Molecular Filtration</div>
+                        <div><i class="fas fa-check-circle"></i> Balanced pH 7.5-8.0</div>
+                        <div><i class="fas fa-check-circle"></i> 100% Quality Guaranteed</div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="C:\Users\saad\Downloads\WhatsApp Image 2026-04-26 at 7.57.36 PM.jpeg" alt="About Molexa" />
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <div class="container">
+                <h2>Why <span>Molexa</span></h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <i class="fas fa-microscope"></i>
+                        <h3>Advanced Technology</h3>
+                        <p>State-of-the-art molecular purification system.</p>
+                    </div>
+                    <div class="team-card">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Eco-Friendly</h3>
+                        <p>Sustainable packaging &amp; zero-waste initiative.</p>
+                    </div>
+                    <div class="team-card">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Quality Certified</h3>
+                        <p>ISO &amp; PSQCA certified purity standards.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- ============================================================
+    PRODUCTS with BUY NOW
+    ============================================================ -->
+    <div id="page-products" class="page-section">
+        <section class="page-header">
+            <div class="container">
+                <h1>Our <span>Products</span></h1>
+                <p>Choose the perfect pack for your needs</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="products-grid">
+                <!-- 500ml -->
+                <div class="product-card golden-border" id="product-500ml">
+                    <div class="product-icon">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 200'%3E%3Crect x='25' y='20' width='50' height='140' rx='10' fill='%231a1a1a' stroke='%23d4af37' stroke-width='1.5'/%3E%3Crect x='30' y='25' width='40' height='60' rx='5' fill='none' stroke='%23d4af37' stroke-width='0.5' opacity='0.2'/%3E%3Ctext x='38' y='70' font-family='Arial' font-size='12' fill='%23d4af37' font-weight='bold'%3E500ml%3C/text%3E%3Crect x='35' y='5' width='30' height='15' rx='3' fill='%23d4af37' opacity='0.8'/%3E%3Ctext x='40' y='16' font-family='Arial' font-size='8' fill='%230a0a0a' font-weight='bold'%3EMOLEXA%3C/text%3E%3C/svg%3E" alt="500ml" style="width:80px;"/>
+                    </div>
+                    <h3>500 ml</h3>
+                    <p class="product-desc">Perfect for on-the-go hydration</p>
+                    <p class="product-price">₨ 50</p>
+                    <div class="free-delivery-badge"><i class="fas fa-truck"></i> Free Delivery</div>
+                    <div class="qty-selector">
+                        <button onclick="changeQty('500ml', -1)">−</button>
+                        <span id="qty-500ml">1</span>
+                        <button onclick="changeQty('500ml', 1)">+</button>
+                    </div>
+                    <button class="btn-primary" onclick="openCheckout('500ml', 50)"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+                </div>
+
+                <!-- 1.5L -->
+                <div class="product-card golden-border" id="product-1.5L">
+                    <div class="product-icon">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 200'%3E%3Crect x='20' y='15' width='60' height='160' rx='12' fill='%231a1a1a' stroke='%23d4af37' stroke-width='1.5'/%3E%3Crect x='28' y='22' width='44' height='70' rx='6' fill='none' stroke='%23d4af37' stroke-width='0.5' opacity='0.2'/%3E%3Ctext x='34' y='70' font-family='Arial' font-size='14' fill='%23d4af37' font-weight='bold'%3E1.5L%3C/text%3E%3Crect x='33' y='3' width='34' height='15' rx='3' fill='%23d4af37' opacity='0.8'/%3E%3Ctext x='38' y='14' font-family='Arial' font-size='8' fill='%230a0a0a' font-weight='bold'%3EMOLEXA%3C/text%3E%3C/svg%3E" alt="1.5L" style="width:90px;"/>
+                    </div>
+                    <h3>1.5 L</h3>
+                    <p class="product-desc">Best for daily home use</p>
+                    <p class="product-price">₨ 100</p>
+                    <div class="free-delivery-badge"><i class="fas fa-truck"></i> Free Delivery</div>
+                    <div class="qty-selector">
+                        <button onclick="changeQty('1.5L', -1)">−</button>
+                        <span id="qty-1.5L">1</span>
+                        <button onclick="changeQty('1.5L', 1)">+</button>
+                    </div>
+                    <button class="btn-primary" onclick="openCheckout('1.5L', 100)"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="bulk-section">
+            <div class="container">
+                <h2>Bulk <span>Orders</span></h2>
+                <p>Special pricing for corporate, events &amp; wholesale orders</p>
+                <a class="btn-primary" onclick="showPage('contact')"><i class="fas fa-envelope"></i> Get Quote</a>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- ============================================================
+    CHECKOUT
+    ============================================================ -->
+    <div id="page-checkout" class="page-section">
+        <section class="page-header">
+            <div class="container">
+                <h1>Place Your <span>Order</span></h1>
+                <p>Fill in your details to confirm your purchase</p>
+            </div>
+        </section>
+
+        <section class="container checkout-section">
+            <div class="checkout-box">
+                <div class="free-delivery-banner">
+                    <i class="fas fa-truck"></i> FREE HOME DELIVERY — All Pakistan
+                </div>
+
+                <div class="order-summary" id="checkoutSummary">
+                    <p><strong>Product:</strong> <span id="checkoutProduct">-</span></p>
+                    <p><strong>Quantity:</strong> <span id="checkoutQty">-</span></p>
+                    <p><strong>Price per unit:</strong> ₨ <span id="checkoutPrice">-</span></p>
+                    <p><strong>Delivery Charges:</strong> <span style="color:#4caf50;">FREE</span></p>
+                    <p class="total-amount">Total: ₨ <span id="checkoutTotal">-</span></p>
+                </div>
+
+                <form id="orderForm" onsubmit="return placeOrder(event)">
+                    <label>Full Name <span class="required">*</span></label>
+                    <input type="text" id="custName" placeholder="Enter your full name" required />
+
+                    <label>Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="custPhone" placeholder="03XX-XXXXXXX" required />
+
+                    <label>Email Address</label>
+                    <input type="email" id="custEmail" placeholder="your@email.com" />
+
+                    <label>Delivery Address <span class="required">*</span></label>
+                    <textarea id="custAddress" placeholder="House #, Street, City, Landmark" rows="3" required></textarea>
+
+                    <label>City <span class="required">*</span></label>
+                    <input type="text" id="custCity" placeholder="Karachi, Lahore, Islamabad..." required />
+
+                    <label>Payment Method <span class="required">*</span></label>
+                    <div class="payment-options">
+                        <div class="payment-option" onclick="selectPayment('cod')">
+                            <input type="radio" name="payment" value="cod" id="payCod" checked />
+                            <label for="payCod"><strong>Cash on Delivery</strong> — Pay when you receive</label>
+                        </div>
+                        <div class="payment-option" onclick="selectPayment('bank')">
+                            <input type="radio" name="payment" value="bank" id="payBank" />
+                            <label for="payBank"><strong>Bank Transfer</strong> — Pay via bank</label>
+                        </div>
+                    </div>
+
+                    <div class="bank-details" id="bankDetails">
+                        <p><strong>Bank: Meezan Bank</strong></p>
+                        <p><strong>Account Title:</strong> Molexa Water (Pvt) Ltd</p>
+                        <p><strong>Account No:</strong> 1234-567890-01</p>
+                        <p><strong>IBAN:</strong> PK99MEZN0012345678901</p>
+                        <p style="color:#ffc107; margin-top:8px;">💡 After transfer, send screenshot on WhatsApp</p>
+                    </div>
+
+                    <label>Special Instructions (Optional)</label>
+                    <textarea id="custNotes" placeholder="Any special delivery instructions..." rows="2"></textarea>
+
+                    <input type="hidden" id="hiddenProduct" />
+                    <input type="hidden" id="hiddenQty" />
+                    <input type="hidden" id="hiddenPrice" />
+                    <input type="hidden" id="hiddenTotal" />
+
+                    <button type="submit" class="btn-primary" style="width:100%; margin-top:16px;">
+                        <i class="fas fa-check-circle"></i> Confirm Order
+                    </button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- ============================================================
+    PRIVATE LABEL
+    ============================================================ -->
+    <div id="page-private-label" class="page-section">
+        <section class="page-header">
+            <div class="container">
+                <h1>Private <span>Label</span></h1>
+                <p>Custom branded water for your business or event</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="pl-grid">
+                <div class="pl-text">
+                    <h2>Your Brand. <span>Our Water.</span></h2>
+                    <p>Molexa Water offers premium private label solutions for:</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Corporate Gifts</li>
+                        <li><i class="fas fa-check-circle"></i> Weddings &amp; Events</li>
+                        <li><i class="fas fa-check-circle"></i> Hotels &amp; Restaurants</li>
+                        <li><i class="fas fa-check-circle"></i> Schools &amp; Universities</li>
+                        <li><i class="fas fa-check-circle"></i> Brand Promotions</li>
+                    </ul>
+                    <a class="btn-primary" onclick="showPage('contact')"><i class="fas fa-phone-alt"></i> Contact Sales</a>
+                </div>
+                <div class="pl-image">
+                    <img src="C:\assets\water.jpg" alt="Private Label" />
+                </div>
+            </div>
+        </section>
+
+        <section class="private-label" style="margin-top:0;">
+            <div class="container">
+                <div>
+                    <h2>ORDER NOW</h2>
+                    <p style="color:#0a0a0a; font-size:1.1rem;">DRINK PURE, LIVE BETTER</p>
+                </div>
+                <div class="order-details">
+                    <p><i class="fas fa-phone-alt"></i> CALL/WHATSAPP: <strong>0315 8969879</strong></p>
+                </div>
+                <a class="btn-primary" onclick="showToast('✅ Order placed! We will contact you.')"><i class="fas fa-shopping-cart"></i> ORDER NOW</a>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- ============================================================
+    CONTACT
+    ============================================================ -->
+    <div id="page-contact" class="page-section">
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact <span>Us</span></h1>
+                <p>We'd love to hear from you</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h2>Send <span>Message</span></h2>
+                    <form id="contactForm" onsubmit="return handleContact(event)">
+                        <input type="text" id="msgName" placeholder="Your Name" required />
+                        <input type="email" id="msgEmail" placeholder="Your Email" required />
+                        <input type="text" id="msgSubject" placeholder="Subject" />
+                        <textarea id="msgBody" placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Get in <span>Touch</span></h3>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div><strong>Phone</strong><br />0315 8969879</div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div><strong>Email</strong><br />shamikkhanzada@gmail.com</div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div><strong>Location</strong><br />36B, Landhi No 4, Karachi</div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div><strong>Hours</strong><br />Mon-Sat: 9AM - 8PM</div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp" style="color:#25D366; font-size:1.6rem;"></i>
+                        <div><strong>WhatsApp</strong><br /><a href="https://wa.me/923158969879" target="_blank" style="color:#25D366; font-weight:600;">Chat Now</a></div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-truck" style="color:#4caf50;"></i>
+                        <div><strong>Delivery</strong><br />Free Home Delivery All Pakistan</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <h2>Find <span>Us</span></h2>
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>36B, Landhi No 4, Karachi</p>
+                    <p style="font-size:0.8rem; color:#555;">(Google Map Embed Here)</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- ============================================================
+    INBOX
+    ============================================================ -->
+    <div id="page-inbox" class="page-section">
+        <section class="page-header">
+            <div class="container">
+                <h1>Your <span>Inbox</span></h1>
+                <p>All messages from customers</p>
+            </div>
+        </section>
+
+        <section class="container inbox-section">
+            <div id="messagesContainer"></div>
+        </section>
+    </div>
+
+
+    <!-- ============================================================
+    ADMIN PANEL
+    ============================================================ -->
+    <div id="admin-panel" class="admin-panel">
+
+        <div id="admin-login">
+            <div class="login-box">
+                <div class="admin-logo">MOLEXA <span>WATER</span></div>
+                <p class="sub"><i class="fas fa-user-shield" style="color:var(--gold);"></i> Admin Login</p>
+                <form id="loginForm" onsubmit="return handleAdminLogin(event)">
+                    <input type="text" id="loginUser" placeholder="Username" value="admin" required />
+                    <input type="password" id="loginPass" placeholder="Password" value="admin123" required />
+                    <button type="submit" class="btn-login"><i class="fas fa-sign-in-alt"></i> Login</button>
+                </form>
+                <p class="error" id="loginError">Invalid credentials!</p>
+                <a class="back-link" onclick="closeAdmin()"><i class="fas fa-arrow-left"></i> Back to Website</a>
+                <p class="admin-note">Default: admin / admin123</p>
+            </div>
+        </div>
+
+        <div id="admin-dashboard" class="admin-dash">
+            <div class="admin-header-bar">
+                <h1><i class="fas fa-tint" style="color:var(--gold);"></i> MOLEXA <span>WATER</span> — Dashboard</h1>
+                <button class="logout-btn" onclick="adminLogout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+
+            <div class="container">
+                <div class="admin-tabs">
+                    <button class="active" onclick="showAdminTab('orders')">📦 Orders</button>
+                    <button onclick="showAdminTab('messages')">💬 Messages</button>
+                </div>
+
+                <div id="adminOrders">
+                    <div class="dash-stats" id="orderStats">
+                        <div class="dash-stat"><h3 id="totalOrders">0</h3><p>Total Orders</p></div>
+                        <div class="dash-stat"><h3 id="pendingOrders">0</h3><p>Pending</p></div>
+                        <div class="dash-stat"><h3 id="deliveredOrders">0</h3><p>Delivered</p></div>
+                        <div class="dash-stat"><h3 id="processingOrders">0</h3><p>Processing</p></div>
+                    </div>
+
+                    <div class="dash-table-wrap">
+                        <h2><i class="fas fa-list-ul"></i> All Orders</h2>
+                        <div id="ordersContainer"></div>
+                    </div>
+                </div>
+
+                <div id="adminMessages" style="display:none;">
+                    <div class="dash-table-wrap">
+                        <h2><i class="fas fa-inbox"></i> All Messages</h2>
+                        <div id="adminMessagesContainer"></div>
+                    </div>
+                </div>
+
+                <div class="dash-actions">
+                    <a><i class="fas fa-plus-circle"></i> Add Product</a>
+                    <a><i class="fas fa-users"></i> Manage Customers</a>
+                    <a><i class="fas fa-chart-bar"></i> View Reports</a>
+                    <a><i class="fas fa-cog"></i> Settings</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>MOLEXA WATER</h3>
+                    <p>Purity at Molecular Level. Premium drinking water with advanced molecular purification technology.</p>
+                    <a href="https://wa.me/923158969879" target="_blank" class="whatsapp-link" style="margin-top:10px;"><i class="fab fa-whatsapp"></i> WhatsApp: 0315 8969879</a>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <a onclick="showPage('home')">Home</a>
+                    <a onclick="showPage('about')">About Us</a>
+                    <a onclick="showPage('products')">Products</a>
+                    <a onclick="showPage('private-label')">Private Label</a>
+                    <a onclick="showPage('contact')">Contact</a>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <a><i class="fas fa-phone-alt" style="color:var(--gold);width:20px;"></i> 0315 8969879</a>
+                    <a><i class="fas fa-envelope" style="color:var(--gold);width:20px;"></i> shamikkhanzada@gmail.com</a>
+                    <a><i class="fas fa-map-marker-alt" style="color:var(--gold);width:20px;"></i> 36B, Landhi No 4, Karachi</a>
+                    <a><i class="fas fa-clock" style="color:var(--gold);width:20px;"></i> Mon-Sat: 9AM - 8PM</a>
+                    <a href="https://wa.me/923158969879" target="_blank" style="color:#25D366;"><i class="fab fa-whatsapp" style="color:#25D366;width:20px;"></i> Chat on WhatsApp</a>
+                    <a style="color:#4caf50;"><i class="fas fa-truck" style="color:#4caf50;width:20px;"></i> Free Delivery All Pakistan</a>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for updates &amp; offers</p>
+                    <form class="newsletter-form" onsubmit="return handleNewsletter(event)">
+                        <input type="email" placeholder="Your Email" required />
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <p style="margin-top:10px;font-size:0.8rem;color:var(--text-dark);">
+                        <i class="fas fa-shield-alt" style="color:var(--gold);"></i> We never share your data
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="logo-foot">MOLEXA WATER</p>
+                <p>&copy; 2026 Molexa Water — Purity at Molecular Level. All Rights Reserved.</p>
+                <p class="footer-heart">Made with <i class="fas fa-heart"></i> in Karachi</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ============================================================
+    TOAST
+    ============================================================ -->
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle"></i> <span id="toastMessage">Success!</span>
+    </div>
+
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+        // ============================================================
+        // DATA STORE
+        // ============================================================
+        let messages = JSON.parse(localStorage.getItem('molexaMessages')) || [];
+        let orders = JSON.parse(localStorage.getItem('molexaOrders')) || [];
+        let isAdminLoggedIn = localStorage.getItem('molexaAdmin') === 'true';
+
+        function saveMessages() {
+            localStorage.setItem('molexaMessages', JSON.stringify(messages));
+        }
+
+        function saveOrders() {
+            localStorage.setItem('molexaOrders', JSON.stringify(orders));
+        }
+
+        // ============================================================
+        // NAVIGATION
+        // ============================================================
+        function toggleMenu() {
+            document.getElementById('mainNav').classList.toggle('open');
+        }
+
+        function showPage(page) {
+            if (document.getElementById('admin-panel').classList.contains('active')) {
+                if (isAdminLoggedIn) {
+                    document.getElementById('admin-panel').classList.remove('active');
+                    document.getElementById('admin-dashboard').classList.remove('active');
+                } else {
+                    document.getElementById('admin-panel').classList.remove('active');
+                    document.getElementById('admin-login').style.display = 'block';
+                    document.getElementById('admin-dashboard').classList.remove('active');
+                }
+            }
+
+            document.querySelectorAll('.page-section').forEach(el => el.classList.remove('active'));
+            const target = document.getElementById('page-' + page);
+            if (target) target.classList.add('active');
+
+            document.querySelectorAll('#mainNav a').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('#mainNav a').forEach(el => {
+                if (el.getAttribute('onclick') && el.getAttribute('onclick').includes("'" + page + "'")) {
+                    el.classList.add('active');
+                }
+            });
+
+            document.getElementById('mainNav').classList.remove('open');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (page === 'inbox') renderMessages();
+            updateAdminButton();
+        }
+
+        // ============================================================
+        // ADMIN
+        // ============================================================
+        function toggleAdmin() {
+            if (isAdminLoggedIn) {
+                document.querySelectorAll('.page-section').forEach(el => el.classList.remove('active'));
+                document.getElementById('admin-panel').classList.add('active');
+                document.getElementById('admin-login').style.display = 'none';
+                document.getElementById('admin-dashboard').classList.add('active');
+                document.getElementById('mainNav').classList.remove('open');
+                renderAdminMessages();
+                renderOrders();
+                updateOrderStats();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                document.querySelectorAll('.page-section').forEach(el => el.classList.remove('active'));
+                document.getElementById('admin-panel').classList.add('active');
+                document.getElementById('admin-login').style.display = 'block';
+                document.getElementById('admin-dashboard').classList.remove('active');
+                document.getElementById('loginError').style.display = 'none';
+                document.getElementById('mainNav').classList.remove('open');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+            updateAdminButton();
+        }
+
+        function closeAdmin() {
+            document.getElementById('admin-panel').classList.remove('active');
+            document.getElementById('admin-login').style.display = 'block';
+            document.getElementById('admin-dashboard').classList.remove('active');
+            showPage('home');
+            updateAdminButton();
+        }
+
+        function handleAdminLogin(e) {
+            e.preventDefault();
+            const user = document.getElementById('loginUser').value;
+            const pass = document.getElementById('loginPass').value;
+            if (user === 'admin' && pass === 'admin123') {
+                isAdminLoggedIn = true;
+                localStorage.setItem('molexaAdmin', 'true');
+                document.getElementById('admin-login').style.display = 'none';
+                document.getElementById('admin-dashboard').classList.add('active');
+                document.getElementById('loginError').style.display = 'none';
+                renderAdminMessages();
+                renderOrders();
+                updateOrderStats();
+                updateAdminButton();
+                showToast('✅ Welcome Admin!');
+            } else {
+                document.getElementById('loginError').style.display = 'block';
+            }
+            return false;
+        }
+
+        function adminLogout() {
+            isAdminLoggedIn = false;
+            localStorage.setItem('molexaAdmin', 'false');
+            document.getElementById('admin-dashboard').classList.remove('active');
+            document.getElementById('admin-login').style.display = 'block';
+            document.getElementById('loginError').style.display = 'none';
+            document.getElementById('loginUser').value = 'admin';
+            document.getElementById('loginPass').value = 'admin123';
+            document.getElementById('admin-panel').classList.remove('active');
+            showPage('home');
+            updateAdminButton();
+            showToast('👋 Logged out successfully');
+        }
+
+        function updateAdminButton() {
+            const btn = document.getElementById('adminBtnText');
+            const link = document.getElementById('adminNavBtn');
+            if (isAdminLoggedIn) {
+                btn.textContent = 'Dashboard';
+                link.classList.add('logged-in');
+            } else {
+                btn.textContent = 'Admin';
+                link.classList.remove('logged-in');
+            }
+        }
+
+        let currentAdminTab = 'orders';
+
+        function showAdminTab(tab) {
+            currentAdminTab = tab;
+            document.querySelectorAll('.admin-tabs button').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.admin-tabs button').forEach(el => {
+                if (el.getAttribute('onclick') && el.getAttribute('onclick').includes("'" + tab + "'")) {
+                    el.classList.add('active');
+                }
+            });
+
+            if (tab === 'orders') {
+                document.getElementById('adminOrders').style.display = 'block';
+                document.getElementById('adminMessages').style.display = 'none';
+                renderOrders();
+                updateOrderStats();
+            } else {
+                document.getElementById('adminOrders').style.display = 'none';
+                document.getElementById('adminMessages').style.display = 'block';
+                renderAdminMessages();
+            }
+        }
+
+        function updateOrderStatus(orderId, newStatus) {
+            const order = orders.find(o => o.id === orderId);
+            if (order) {
+                order.status = newStatus;
+                saveOrders();
+                renderOrders();
+                updateOrderStats();
+                showToast('✅ Order status updated to: ' + newStatus);
+            }
+        }
+
+        // ============================================================
+        // PRODUCT - QTY & CHECKOUT
+        // ============================================================
+        let quantities = { '500ml': 1, '1.5L': 1 };
+
+        function changeQty(product, delta) {
+            quantities[product] = Math.max(1, quantities[product] + delta);
+            document.getElementById('qty-' + product).textContent = quantities[product];
+        }
+
+        function openCheckout(product, price) {
+            const qty = quantities[product];
+            const total = qty * price;
+
+            document.getElementById('checkoutProduct').textContent = product;
+            document.getElementById('checkoutQty').textContent = qty;
+            document.getElementById('checkoutPrice').textContent = price;
+            document.getElementById('checkoutTotal').textContent = total;
+
+            document.getElementById('hiddenProduct').value = product;
+            document.getElementById('hiddenQty').value = qty;
+            document.getElementById('hiddenPrice').value = price;
+            document.getElementById('hiddenTotal').value = total;
+
+            document.getElementById('orderForm').reset();
+            document.getElementById('bankDetails').classList.remove('show');
+            document.getElementById('payCod').checked = true;
+
+            showPage('checkout');
+        }
+
+        function selectPayment(method) {
+            if (method === 'cod') {
+                document.getElementById('payCod').checked = true;
+                document.getElementById('bankDetails').classList.remove('show');
+            } else {
+                document.getElementById('payBank').checked = true;
+                document.getElementById('bankDetails').classList.add('show');
+            }
+        }
+
+        // ============================================================
+        // PLACE ORDER
+        // ============================================================
+        function placeOrder(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('custName').value.trim();
+            const phone = document.getElementById('custPhone').value.trim();
+            const email = document.getElementById('custEmail').value.trim();
+            const address = document.getElementById('custAddress').value.trim();
+            const city = document.getElementById('custCity').value.trim();
+            const notes = document.getElementById('custNotes').value.trim();
+            const payment = document.querySelector('input[name="payment"]:checked').value;
+            const product = document.getElementById('hiddenProduct').value;
+            const qty = parseInt(document.getElementById('hiddenQty').value);
+            const price = parseInt(document.getElementById('hiddenPrice').value);
+            const total = parseInt(document.getElementById('hiddenTotal').value);
+
+            if (!name || !phone || !address || !city) {
+                showToast('Please fill all required fields!', 'error');
+                return false;
+            }
+
+            const order = {
+                id: 'ORD-' + Date.now().toString().slice(-6),
+                product: product,
+                quantity: qty,
+                price: price,
+                total: total,
+                customer: name,
+                phone: phone,
+                email: email || 'N/A',
+                address: address,
+                city: city,
+                notes: notes || 'None',
+                payment: payment === 'cod' ? 'Cash on Delivery' : 'Bank Transfer',
+                date: new Date().toLocaleString(),
+                status: 'pending'
+            };
+
+            orders.unshift(order);
+            saveOrders();
+
+            quantities[product] = 1;
+            document.getElementById('qty-' + product).textContent = '1';
+
+            showToast('✅ Order placed successfully! We will contact you shortly.');
+
+            setTimeout(() => {
+                showPage('home');
+            }, 2000);
+
+            if (document.getElementById('admin-dashboard').classList.contains('active')) {
+                renderOrders();
+                updateOrderStats();
+            }
+
+            return false;
+        }
+
+        // ============================================================
+        // ORDERS
+        // ============================================================
+        function renderOrders() {
+            const container = document.getElementById('ordersContainer');
+            if (orders.length === 0) {
+                container.innerHTML = `
+                            <div class="no-messages">
+                                <i class="fas fa-box"></i>
+                                <p>No orders yet.</p>
+                            </div>
+                        `;
+                return;
+            }
+
+            let html = '';
+            orders.forEach(order => {
+                const statusClass = order.status === 'pending' ? 'pending' :
+                    order.status === 'delivered' ? 'delivered' :
+                    order.status === 'cancelled' ? 'cancelled' : 'processing';
+
+                html += `
+                            <div class="order-detail-card">
+                                <div class="od-row">
+                                    <span><strong>${order.id}</strong></span>
+                                    <span><span class="status-badge ${statusClass}">${order.status}</span></span>
+                                </div>
+                                <div class="od-row">
+                                    <span class="label">Customer:</span>
+                                    <span><strong>${order.customer}</strong> (${order.phone})</span>
+                                </div>
+                                <div class="od-row">
+                                    <span class="label">Product:</span>
+                                    <span>${order.product} × ${order.quantity} = ₨ ${order.total}</span>
+                                </div>
+                                <div class="od-row">
+                                    <span class="label">Address:</span>
+                                    <span>${order.address}, ${order.city}</span>
+                                </div>
+                                <div class="od-row">
+                                    <span class="label">Payment:</span>
+                                    <span>${order.payment}</span>
+                                </div>
+                                <div class="od-row">
+                                    <span class="label">Date:</span>
+                                    <span>${order.date}</span>
+                                </div>
+                                ${order.notes !== 'None' ? `
+                                <div class="od-row">
+                                    <span class="label">Notes:</span>
+                                    <span>${order.notes}</span>
+                                </div>
+                                ` : ''}
+                                <div class="status-actions">
+                                    <button class="btn-processing" onclick="updateOrderStatus('${order.id}', 'processing')">Processing</button>
+                                    <button class="btn-delivered" onclick="updateOrderStatus('${order.id}', 'delivered')">Delivered</button>
+                                    <button class="btn-cancelled" onclick="updateOrderStatus('${order.id}', 'cancelled')">Cancel</button>
+                                </div>
+                            </div>
+                        `;
+            });
+
+            container.innerHTML = html;
+        }
+
+        function updateOrderStats() {
+            const total = orders.length;
+            const pending = orders.filter(o => o.status === 'pending').length;
+            const delivered = orders.filter(o => o.status === 'delivered').length;
+            const processing = orders.filter(o => o.status === 'processing').length;
+
+            document.getElementById('totalOrders').textContent = total;
+            document.getElementById('pendingOrders').textContent = pending;
+            document.getElementById('deliveredOrders').textContent = delivered;
+            document.getElementById('processingOrders').textContent = processing;
+        }
+
+        // ============================================================
+        // CONTACT FORM
+        // ============================================================
+        function handleContact(e) {
+            e.preventDefault();
+            const name = document.getElementById('msgName').value.trim();
+            const email = document.getElementById('msgEmail').value.trim();
+            const subject = document.getElementById('msgSubject').value.trim() || 'No Subject';
+            const body = document.getElementById('msgBody').value.trim();
+
+            if (!name || !email || !body) {
+                showToast('Please fill all required fields!', 'error');
+                return false;
+            }
+
+            const newMsg = {
+                id: Date.now(),
+                name: name,
+                email: email,
+                subject: subject,
+                body: body,
+                date: new Date().toLocaleString(),
+                replied: false,
+                reply: null
+            };
+
+            messages.unshift(newMsg);
+            saveMessages();
+            showToast('✅ Message sent successfully! We will get back to you soon.');
+            e.target.reset();
+
+            if (document.getElementById('page-inbox').classList.contains('active')) renderMessages();
+            return false;
+        }
+
+        // ============================================================
+        // RENDER MESSAGES
+        // ============================================================
+        function renderMessages() {
+            const container = document.getElementById('messagesContainer');
+            if (messages.length === 0) {
+                container.innerHTML = `
+                            <div class="no-messages">
+                                <i class="fas fa-inbox"></i>
+                                <p>No messages yet.</p>
+                            </div>
+                        `;
+                return;
+            }
+
+            let html = '';
+            messages.forEach(msg => {
+                html += `
+                            <div class="message-card">
+                                <div class="msg-header">
+                                    <h4><i class="fas fa-user" style="color:var(--gold);"></i> ${msg.name} <span style="color:var(--text-dark);font-weight:300;">(${msg.email})</span></h4>
+                                    <small><i class="far fa-clock"></i> ${msg.date}</small>
+                                </div>
+                                <div class="msg-body">
+                                    <strong style="color:var(--gold);">Subject:</strong> ${msg.subject}
+                                    <p style="margin-top:4px;">${msg.body}</p>
+                                </div>
+                                ${msg.reply ? `
+                                <div class="msg-reply">
+                                    <strong><i class="fas fa-reply" style="color:var(--gold);"></i> Admin Reply:</strong>
+                                    <p>${msg.reply}</p>
+                                </div>
+                                ` : ''}
+                            </div>
+                        `;
+            });
+            container.innerHTML = html;
+        }
+
+        // ============================================================
+        // RENDER ADMIN MESSAGES
+        // ============================================================
+        function renderAdminMessages() {
+            const container = document.getElementById('adminMessagesContainer');
+            if (messages.length === 0) {
+                container.innerHTML = `
+                            <div class="no-messages">
+                                <i class="fas fa-inbox"></i>
+                                <p>No messages received yet.</p>
+                            </div>
+                        `;
+                return;
+            }
+
+            let html = '';
+            messages.forEach((msg) => {
+                html += `
+                            <div class="message-card">
+                                <div class="msg-header">
+                                    <h4><i class="fas fa-user" style="color:var(--gold);"></i> ${msg.name} <span style="color:var(--text-dark);font-weight:300;">(${msg.email})</span></h4>
+                                    <small><i class="far fa-clock"></i> ${msg.date}</small>
+                                </div>
+                                <div class="msg-body">
+                                    <strong style="color:var(--gold);">Subject:</strong> ${msg.subject}
+                                    <p style="margin-top:4px;">${msg.body}</p>
+                                </div>
+                                ${msg.reply ? `
+                                <div class="msg-reply">
+                                    <strong><i class="fas fa-reply" style="color:var(--gold);"></i> Admin Reply:</strong>
+                                    <p>${msg.reply}</p>
+                                </div>
+                                ` : `
+                                <form class="reply-form" onsubmit="return handleReply(event, ${msg.id})">
+                                    <input type="text" placeholder="Type your reply..." required />
+                                    <button type="submit"><i class="fas fa-reply"></i> Reply</button>
+                                </form>
+                                `}
+                            </div>
+                        `;
+            });
+            container.innerHTML = html;
+        }
+
+        // ============================================================
+        // HANDLE REPLY
+        // ============================================================
+        function handleReply(e, msgId) {
+            e.preventDefault();
+            const input = e.target.querySelector('input');
+            const replyText = input.value.trim();
+
+            if (!replyText) {
+                showToast('Please type a reply!', 'error');
+                return false;
+            }
+
+            const msg = messages.find(m => m.id === msgId);
+            if (msg) {
+                msg.reply = replyText;
+                msg.replied = true;
+                saveMessages();
+                showToast('✅ Reply sent successfully!');
+                renderAdminMessages();
+                if (document.getElementById('page-inbox').classList.contains('active')) renderMessages();
+            }
+            return false;
+        }
+
+        // ============================================================
+        // NEWSLETTER
+        // ============================================================
+        function handleNewsletter(e) {
+            e.preventDefault();
+            const input = e.target.querySelector('input');
+            if (input.value.trim()) {
+                showToast('✅ Subscribed successfully!');
+                input.value = '';
+            }
+            return false;
+        }
+
+        // ============================================================
+        // TOAST
+        // ============================================================
+        function showToast(message, type) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMessage');
+            toastMsg.textContent = message;
+            toast.classList.add('show');
+
+            if (type === 'error') {
+                toast.style.borderColor = '#ff6b6b';
+                toast.querySelector('i').className = 'fas fa-exclamation-circle';
+                toast.querySelector('i').style.color = '#ff6b6b';
+            } else {
+                toast.style.borderColor = 'var(--gold)';
+                toast.querySelector('i').className = 'fas fa-check-circle';
+                toast.querySelector('i').style.color = 'var(--gold)';
+            }
+
+            clearTimeout(toast._timeout);
+            toast._timeout = setTimeout(() => {
+                toast.classList.remove('show');
+            }, 4000);
+        }
+
+        // ============================================================
+        // CLOSE MENU
+        // ============================================================
+        document.addEventListener('click', function(e) {
+            const nav = document.getElementById('mainNav');
+            const hamburger = document.querySelector('.hamburger');
+            if (nav.classList.contains('open')) {
+                if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+                    nav.classList.remove('open');
+                }
+            }
+        });
+
+        // ============================================================
+        // INIT
+        // ============================================================
+        console.log('🚀 MOLEXA WATER — Purity at Molecular Level');
+        console.log('🔑 Admin Login: admin / admin123');
+        console.log('📩 Messages:', messages.length);
+        console.log('📦 Orders:', orders.length);
+
+        updateAdminButton();
+
+        if (document.getElementById('page-inbox').classList.contains('active')) {
+            renderMessages();
+        }
+
+        document.querySelectorAll('input[name="payment"]').forEach(el => {
+            el.addEventListener('change', function() {
+                if (this.value === 'bank') {
+                    document.getElementById('bankDetails').classList.add('show');
+                } else {
+                    document.getElementById('bankDetails').classList.remove('show');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
